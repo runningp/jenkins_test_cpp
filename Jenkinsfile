@@ -13,6 +13,11 @@ pipeline {
         sh '''make
 '''
       }
+      post {
+        always {
+        archiveArtifacts 'target/*'
+        }
+      }
     }
     stage('Print') {
       steps {
