@@ -15,7 +15,7 @@ pipeline {
       }
       post {
         always {
-        archiveArtifacts 'target/*'
+        archiveArtifacts '*'
         }
       }
     }
